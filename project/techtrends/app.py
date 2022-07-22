@@ -95,9 +95,9 @@ def health_check():
 @app.route('/metrics')
 def metrics():
     connection = get_db_connection()
-    posts = connection.execute('SELECT * FROM posts').fetchall()[0][0]
+    posts = connection.execute('SELECT count(id) FROM posts').fetchall()[0][0]
     connection.close()
-    return jsonify({"db_connection_count": concurrent_connections, "post_count": len(posts)})
+    return jsonify({"db_connection_count": concurrent_connections, "post_count": posts})
 
 
 # Define the post creation functionality
@@ -151,4 +151,4 @@ if __name__ == "__main__":
     app.logger.addHandler(file_handler)
     werkzeug_logger.addHandler(file_handler)
     werkzeug_logger.addHandler(stdout_handler)
-    app.run(port=3111, debug=True)
+    app.run(host='0.0.0.0', port=3111, debug=True)

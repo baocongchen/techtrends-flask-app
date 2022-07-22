@@ -1,11 +1,52 @@
-## Docker commands used to build the application 
-# TODO: insert the docker build command
+## Docker commands used to build the application
+
+docker build -t petetran/techtrends:1.0 .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+
+docker run -d -p 7111:3111 --name "techtrends" petetran/techtrends:1.0
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+
+docker logs techtrends
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+
+- Serving Flask app 'app' (lazy loading)
+- Environment: production
+  WARNING: This is a development server. Do not use it in a production deployment.
+  Use a production WSGI server instead.
+- Debug mode: on
+  WARNING:werkzeug:2022-07-22 14:30:28,171, _ Running on all addresses.
+  WARNING: This is a development server. Do not use it in a production deployment.
+  INFO:werkzeug:2022-07-22 14:30:28,171, _ Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+  INFO:werkzeug:2022-07-22 14:30:28,172, _ Restarting with stat
+  WARNING:werkzeug:2022-07-22 14:30:28,373, _ Debugger is active!
+  INFO:werkzeug:2022-07-22 14:30:28,374, \* Debugger PIN: 106-477-547
+  INFO:werkzeug:2022-07-22 14:30:32,648, 172.17.0.1 - - [22/Jul/2022 14:30:32] "GET / HTTP/1.1" 200 -
+  INFO:werkzeug:2022-07-22 14:30:32,924, 172.17.0.1 - - [22/Jul/2022 14:30:32] "GET /static/css/main.css HTTP/1.1" 304 -
+  [2022-07-22 14:30:35,864] INFO in app: About Us page is retrieved
+  INFO:app:2022-07-22 14:30:35,864, About Us page is retrieved
+  INFO:werkzeug:2022-07-22 14:30:35,866, 172.17.0.1 - - [22/Jul/2022 14:30:35] "GET /about HTTP/1.1" 200 -
+  INFO:werkzeug:2022-07-22 14:30:36,043, 172.17.0.1 - - [22/Jul/2022 14:30:36] "GET /static/css/main.css HTTP/1.1" 304 -
+  INFO:werkzeug:2022-07-22 14:30:38,921, 172.17.0.1 - - [22/Jul/2022 14:30:38] "GET /create HTTP/1.1" 200 -
+  INFO:werkzeug:2022-07-22 14:30:39,013, 172.17.0.1 - - [22/Jul/2022 14:30:39] "GET /static/css/main.css HTTP/1.1" 304 -
+  [2022-07-22 14:30:55,258] INFO in app: Article "ABC" is created
+  INFO:app:2022-07-22 14:30:55,258, Article "ABC" is created
+  INFO:werkzeug:2022-07-22 14:30:55,259, 172.17.0.1 - - [22/Jul/2022 14:30:55] "POST /create HTTP/1.1" 302 -
+  INFO:werkzeug:2022-07-22 14:30:55,276, 172.17.0.1 - - [22/Jul/2022 14:30:55] "GET / HTTP/1.1" 200 -
+  INFO:werkzeug:2022-07-22 14:30:55,531, 172.17.0.1 - - [22/Jul/2022 14:30:55] "GET /static/css/main.css HTTP/1.1" 304 -
+  [2022-07-22 14:31:00,833] INFO in app: Article "CNCF Cloud Native Interactive Landscape" retrieved!
+  INFO:app:2022-07-22 14:31:00,833, Article "CNCF Cloud Native Interactive Landscape" retrieved!
+  INFO:werkzeug:2022-07-22 14:31:00,835, 172.17.0.1 - - [22/Jul/2022 14:31:00] "GET /4 HTTP/1.1" 200 -
+  INFO:werkzeug:2022-07-22 14:31:00,934, 172.17.0.1 - - [22/Jul/2022 14:31:00] "GET /static/css/main.css HTTP/1.1" 304 -
+  [2022-07-22 14:31:07,592] ERROR in app: Error: 404; Post with id 400 does not exist
+  ERROR:app:2022-07-22 14:31:07,592, Error: 404; Post with id 400 does not exist
+  ERROR:app:2022-07-22 14:31:07,592, Error: 404; Post with id 400 does not exist
+  INFO:werkzeug:2022-07-22 14:31:07,594, 172.17.0.1 - - [22/Jul/2022 14:31:07] "GET /400 HTTP/1.1" 404 -
+  INFO:werkzeug:2022-07-22 14:31:07,688, 172.17.0.1 - - [22/Jul/2022 14:31:07] "GET /static/css/main.css HTTP/1.1" 304 -
+  INFO:werkzeug:2022-07-22 14:31:44,466, 172.17.0.1 - - [22/Jul/2022 14:31:44] "GET /metrics HTTP/1.1" 200 -
+  7
+  INFO:werkzeug:2022-07-22 14:31:51,122, 172.17.0.1 - - [22/Jul/2022 14:31:51] "GET /healthz HTTP/1.1" 200 -
+  INFO:werkzeug:2022-07-22 14:33:29,554, 172.17.0.1 - - [22/Jul/2022 14:33:29] "GET / HTTP/1.1" 200 -
+  INFO:werkzeug:2022-07-22 14:33:29,746, 172.17.0.1 - - [22/Jul/2022 14:33:29] "GET /static/css/main.css HTTP/1.1" 304 -
