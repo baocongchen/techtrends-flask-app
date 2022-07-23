@@ -91,7 +91,6 @@ def health_check():
 
 # Define the Metrics endpoint
 
-
 @app.route('/metrics')
 def metrics():
     connection = get_db_connection()
