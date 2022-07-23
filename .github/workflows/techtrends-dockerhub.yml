@@ -24,6 +24,7 @@ jobs:
           images: |
             petetran/techtrends
           tags: |
+            type=raw,value=v1.0
             type=ref,event=branch
             type=sha
             type=raw,value=latest
