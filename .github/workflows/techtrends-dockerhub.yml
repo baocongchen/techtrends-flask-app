@@ -10,7 +10,7 @@ on:
       - "main"
 
 jobs:
-  build_and_push:
+  build:
     name: Package and Push TechTrends App
     runs-on: ubuntu-latest
     steps:
