@@ -42,7 +42,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: techtrends:latest
           file: ./project/Dockerfile
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
