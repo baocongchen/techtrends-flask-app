@@ -40,4 +40,5 @@ jobs:
       ## Run all pytests by inovking the `pytest command`
       - name: Test with pytest
         run: |
+          cd /home/runner/work/techtrends-flask-app
           pytest
