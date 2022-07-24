@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.10.5]
+        python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
     ## Define a sequence of steps to be executed
     steps:
       ## Use the public `checkout` action  in version v2
@@ -27,7 +27,7 @@ jobs:
         ## Additionally, it ensures to loop through all
         ## the defined Python versions.
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
       ## Install all necessary dependecies .
