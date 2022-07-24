@@ -34,9 +34,9 @@ jobs:
       ## For example, pytest and any defined packages within the requirements.txt file.
       - name: Install dependencies
         run: |
-          python3 -m pip3 install --upgrade pip3
-          pip3 install  pytest 
-          if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
+          python -m pip install --upgrade pip
+          pip install  pytest 
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       ## Run all pytests by inovking the `pytest command`
       - name: Test with pytest
         run: |
