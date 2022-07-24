@@ -37,8 +37,3 @@ jobs:
           python -m pip install --upgrade pip
           pip install  pytest 
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      ## Run all pytests by inovking the `pytest command`
-      - name: Test with pytest
-        run: |
-          cd /home/runner/work/techtrends-flask-app
-          pytest
