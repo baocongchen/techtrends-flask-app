@@ -29,8 +29,8 @@ spec:
               memory: {{ .Values.resources.requests.memory }}
               cpu: {{ .Values.resources.requests.cpu }}
             limits:
-              memory: {{ .Values.limits.memory }}
-              cpu: {{ .Values.limits.cpu }}
+              memory: {{ .Values.resources.limits.memory }}
+              cpu: {{ .Values.resources.limits.cpu }}
           readinessProbe:
             httpGet:
               path: {{ .Values.readinessProbe.path }}
