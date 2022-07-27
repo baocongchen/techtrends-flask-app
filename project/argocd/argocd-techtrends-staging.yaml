@@ -13,6 +13,6 @@ spec:
       valueFiles:
         - values-staging.yaml
     path: project/helm
-    repoURL: https://github.com/baocongchen/techtrends-flask-app
+    repoURL: https://github.com/baocongchen/techtrends-flask-app.git
     targetRevision: HEAD
   syncPolicy: {}
