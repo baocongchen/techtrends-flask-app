@@ -40,7 +40,7 @@ spec:
           livenessProbe:
             httpGet:
               path: {{ .Values.livenessProbe.path }}
-              port: {{ .Values.containerPort.path }}
+              port: {{ .Values.containerPort }}
             initialDelaySeconds: 5
             periodSeconds: 10
 status: {}
