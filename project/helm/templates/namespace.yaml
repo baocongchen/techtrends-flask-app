@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   labels:
     kubernetes.io/metadata.name: kube-system
-  name: sandbox
+  name: { { .Values.namespace.name } }
 spec:
   finalizers:
     - kubernetes
